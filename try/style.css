@@ -1,0 +1,35 @@
+header{
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    top: 0px;
+    padding: 2px;
+    font-size: 60px;
+    position: fixed;
+     width: 100%;  
+      left: 0;
+}
+p{
+    margin-top: 80px;
+    font-size: 24px;
+    text-align: center;
+}
+section{
+    margin-top: 90px;
+}
+td{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+}
+.t1{
+    background-color: red;
+}
+.t2{
+    background-color: blue;
+}
+.t3{
+    background-color: green;
+}

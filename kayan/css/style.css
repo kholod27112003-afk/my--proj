@@ -1,0 +1,103 @@
+   @font-face {
+  font-family: 'Beckan-Personal';
+  src: url('../Beckan-Personal Use.otf');
+}
+   header{
+     background-color:#b09c87;
+     padding: 2px;
+     letter-spacing: 4px;
+    text-align: center;
+    font-size: 60px;
+    color: rgb(247, 247, 245);
+    font-family: 'Beckan-Personal';
+     position: fixed;    /* يخلي الهيدر ثابت */
+    top: 0;             /* يكون في أعلى الصفحة */
+    left: 0;            /* يبدأ من اليسار */
+    width: 100%;        /* يغطي كل عرض الصفحة */
+    border: none;       /* نشيل أي حدود */
+    box-shadow: none;   /* لو في ظل نشيله */
+    z-index: 1000;  
+   }
+   .animated-word {
+    font-size: 2rem;
+    line-height: 1;
+   }
+
+   .animated-word span {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateX(60px);  /* البداية بعيد أفقياً */
+    opacity: 0;
+    will-change: transform, opacity;
+    animation: gather 0.6s forwards;
+   }
+
+   .animated-word span:nth-child(1) { animation-delay: 0s; }
+  .animated-word span:nth-child(2) { animation-delay: 0.1s; }
+  .animated-word span:nth-child(3) { animation-delay: 0.2s; }
+  .animated-word span:nth-child(4) { animation-delay: 0.3s; }
+  .animated-word span:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes gather {
+    to {
+        transform: translateX(0);  /* تتحرك جنب بعض */
+        opacity: 1;
+    }
+}
+ body {
+    background-image: url('../photos/cover1.jpeg'); /* حطي اسم الصورة أو مسارها */
+    background-size: cover;   /* الصورة تغطي الشاشة كلها */
+    background-repeat: no-repeat; /* تمنع تكرار الصورة */
+    background-position: center;  /* تمركز الصورة في النص */
+    margin: 0;
+    min-height: 100vh; 
+    overflow-x: hidden;
+  }
+     @font-face {
+  font-family: 'Vortigra';
+  src: url('../lang/Vortigra.otf');
+}
+.introphrase {
+  margin-top: 85px; 
+  margin-bottom: 5px;             /* تحت الهيدر */
+  text-align: center;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  font-family: Vortigra;
+  font-weight: bold;
+  z-index: 1000;
+}
+/* 1. السيكشن الأساسي (زي ما هو بس ضيفي دي) */
+.products-section {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding-top: 5px !important;
+    margin: 0 auto !important;
+    gap: 0 !important; /* نلغي أي مسافات تلقائية بين العناصر */
+}
+
+/* 2. الفيديو والصور (تعديل بسيط هنا) */
+.introvideo, 
+.products-section figure img {
+    width: 90% !important; 
+    max-width: 600px !important; 
+    height: auto !important; 
+    aspect-ratio: 3 / 4 !important; 
+    object-fit: cover !important; 
+    margin-bottom: 20px !important; /* المسافة اللي إنتي عايزاها بالظبط */
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 10px;
+}
+
+/* 3. الـ Figure (تصفير شامل) */
+.products-section figure {
+    width: 90% !important;        /* نفس عرض الصورة */
+    max-width: 600px !important;
+    margin: 0 auto !important;    /* يسنتر الصندوق */
+    padding: 0 !important;
+    height: auto !important;      /* خليه ياخد طول اللي جواه بس */
+}

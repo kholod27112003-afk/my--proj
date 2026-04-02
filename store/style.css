@@ -1,0 +1,39 @@
+     @font-face {
+  font-family: 'Vortigra';
+  src: url('../lang/Vortigra.otf');
+}
+header{
+    background-color: #6E473B;
+    color: white;
+    font-family: 'Vortigra', sans-serif;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center; /* توسيط رأسي */
+    box-sizing: border-box;
+    z-index: 1000;
+}
+body{
+    background-color:#c7b5a3;
+}
+h1{
+   flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    /* بنضيف padding-left عشان نعوض مساحة الأيقونات ويجي في النص بالظبط */
+    padding-left: 80px;
+}
+.fa-github, .fa-instagram, .fa-whatsapp, .fa-facebook, .fa-linkedin {
+    color: white;
+    font-size: 20px;
+    width: 25px;
+    text-decoration: none;
+    display: flex;
+}
+ header a{
+    text-decoration: none !important; 
+    text-align: right;
+}
